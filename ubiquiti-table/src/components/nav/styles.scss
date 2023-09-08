@@ -1,0 +1,16 @@
+.nav {
+  width: auto;
+  background-color: #F4F5F6;
+  display: flex;
+  color: #808893;
+  align-items: center;
+
+  .title {
+    margin-left: 10px;
+  }
+
+  .author {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+}
