@@ -1,3 +1,14 @@
 .tableNav {
   display: flex;
+  width: auto;
+
+  .device-count {
+    color: #CDCDCD;
+    font-size: 12px;
+    padding-left: 8px;
+  }
+
+  .tools {
+    margin-left: auto;
+  }
 }

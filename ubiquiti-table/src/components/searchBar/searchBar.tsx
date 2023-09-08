@@ -4,9 +4,9 @@ import { SearchInputProps } from '../../interfaces/interfaces';
 
 const SearchBar: React.FC<SearchInputProps> = ({searchValue, handleChange}) => {
   return (
-    <div>
+    <div className="searchBar">
       <input
-        className="searchBar"
+        className="input"
         placeholder="Search"
         onChange={handleChange}
         type="text"

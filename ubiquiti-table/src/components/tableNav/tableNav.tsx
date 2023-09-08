@@ -14,10 +14,12 @@ const TableNav: React.FC<TableNavProps> = ({count}) => {
   return (
     <div className="tableNav">
       <SearchBar searchValue={searchValue} handleChange={handleChange}/>
-      <div>{count}</div>
-      <img src="/table-default.png" />
-      <img src="/grid-default.png" />
-      <button>Filter</button>
+      <div className="device-count">{count} Devices</div>
+      <div className="tools">
+        <img src="/table-default.png" />
+        <img src="/grid-default.png" />
+        <button>Filter</button>
+      </div>
     </div>
   );
 };
