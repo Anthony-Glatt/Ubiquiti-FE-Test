@@ -1,0 +1,21 @@
+.searchBar {
+  background-color: #F6F6F8;
+  background-image: url('../../../public/search-icon.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 40px;
+  &:hover {
+    background-color: #EDEDF0;
+  }
+  &:active {
+    border-color: #006FFF;
+    outline: none;
+  }
+  &:focus {
+    border-color: #006FFF;
+    outline: none;
+  }
+  &:focus::placeholder {
+    color: transparent;
+  }
+}

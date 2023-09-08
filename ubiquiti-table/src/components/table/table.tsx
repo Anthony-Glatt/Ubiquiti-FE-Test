@@ -1,18 +1,5 @@
 import React from "react";
-
-interface TableDevice {
-  product: string;
-  name: string;
-  icon: {
-    id: string;
-    resolutions: number[][];
-    url: string;
-  }
-};
-
-interface TableDeviceProps {
-  data: TableDevice[];
-}
+import { TableDeviceProps } from "../../interfaces/interfaces";
 
 const DeviceTable: React.FC<TableDeviceProps> = ({data}) => {
   return (
@@ -27,7 +14,10 @@ const DeviceTable: React.FC<TableDeviceProps> = ({data}) => {
         {data.map((val, key) => {
           return (
             <tr key={key}>
-              <td>{val.icon.url}{val.product}</td>
+              <td>
+                <img src={val.icon.url} alt='Product Icon'/>
+                {val.product}
+              </td>
               <td>{val.name}</td>
             </tr>
           )
