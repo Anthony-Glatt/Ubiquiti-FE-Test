@@ -48,6 +48,7 @@ interface SearchInputProps {
 
 interface TableNavProps {
   count: number;
+  searchBarValue(e: { target: { value: string; }; }): void;
 }
 
 export type {

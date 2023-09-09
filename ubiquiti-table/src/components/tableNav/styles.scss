@@ -1,6 +1,8 @@
 .tableNav {
   display: flex;
   width: auto;
+  margin-top: 8px;
+  align-items: center;
 
   .device-count {
     color: #CDCDCD;
@@ -10,5 +12,25 @@
 
   .tools {
     margin-left: auto;
+  }
+
+  .filter-btn {
+    background-color: #FFFFFF;
+    color: #9A9A9A;
+    border-color: transparent;
+
+    &:hover {
+      background-color: #F4F5F6;
+    }
+
+    &:focus {
+      border-color: #006FFF;
+    }
+
+    &:active {
+      border-color: #F9FAFA;
+      color: #006FFF;
+      border-style: outset;
+    }
   }
 }

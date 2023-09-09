@@ -4,11 +4,12 @@ import { TableNavProps } from "../../interfaces/interfaces";
 import SearchBar from "../searchBar/searchBar";
 
 
-const TableNav: React.FC<TableNavProps> = ({count}) => {
+const TableNav: React.FC<TableNavProps> = ({count, searchBarValue}) => {
   const [searchValue, setSearchValue] = useState<string>('');
 
   const handleChange = (e: { target: { value: string; }; }) => {
     setSearchValue(e.target.value);
+    searchBarValue(e.target.value);
   };
 
   return (
@@ -18,7 +19,7 @@ const TableNav: React.FC<TableNavProps> = ({count}) => {
       <div className="tools">
         <img src="/table-default.png" />
         <img src="/grid-default.png" />
-        <button>Filter</button>
+        <button className="filter-btn">Filter</button>
       </div>
     </div>
   );

@@ -6,7 +6,8 @@
     background-repeat: no-repeat;
     background-position: left center;
     padding-left: 24px;
-    border: none;
+    border-color: transparent;
+    border-radius: 4px;
     &:hover {
       background-color: #EDEDF0;
     }

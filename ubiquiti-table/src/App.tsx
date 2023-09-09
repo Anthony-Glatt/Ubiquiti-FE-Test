@@ -7,6 +7,7 @@ import { Device, TableDevice } from './interfaces/interfaces';
 
 function App() {
   const [data, setData] = useState<TableDevice[]>([]);
+  const [searchBarValue, setSearchBarValue] = useState<string>('');
 
   useEffect(() => {
     fetch('/data.json')
@@ -27,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <Nav title="Devices" author="Anthony"/>
-      <TableNav count={data.length} />
+      <TableNav count={data.length} searchBarValue={setSearchBarValue}/>
       <Table data={data}></Table>
     </div>
   );
