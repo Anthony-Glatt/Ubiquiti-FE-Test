@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Nav from './components/nav/nav';
 import TableNav from './components/tableNav/tableNav';
@@ -7,7 +7,9 @@ import { Device, TableDevice } from './interfaces/interfaces';
 
 function App() {
   const [data, setData] = useState<TableDevice[]>([]);
+  const [modTable, setModTable] = useState<TableDevice[]>([]);
   const [searchBarValue, setSearchBarValue] = useState<string>('');
+  const [filterValue, setFilterValue] = useState<string[]>([]);
 
   useEffect(() => {
     fetch('/data.json')
@@ -23,13 +25,25 @@ function App() {
         return value;
       });
       setData(modData);
+      setModTable(modData);
     });
   }, []);
+
+  useEffect(() => {
+    if (filterValue.length || searchBarValue !== '') {
+      const filterRes = data.filter((device) => { return filterValue.indexOf(device.product) >= 0});
+      const finalRes = filterRes.filter(device => device.name.includes(searchBarValue));
+      setModTable(finalRes);
+    } else {
+      setModTable(data);
+    }
+  }, [searchBarValue, filterValue.length]);
+
   return (
     <div className="App">
       <Nav title="Devices" author="Anthony"/>
-      <TableNav count={data.length} searchBarValue={setSearchBarValue}/>
-      <Table data={data}></Table>
+      <TableNav count={data.length} searchBarValue={setSearchBarValue} setFilterValue={setFilterValue} />
+      <Table data={modTable}></Table>
     </div>
   );
 }

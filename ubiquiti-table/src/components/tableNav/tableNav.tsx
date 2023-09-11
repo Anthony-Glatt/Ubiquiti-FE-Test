@@ -1,16 +1,20 @@
-import React, {useState} from "react";
+import React,  {useState, useEffect } from "react";
 import './styles.scss';
 import { TableNavProps } from "../../interfaces/interfaces";
 import SearchBar from "../searchBar/searchBar";
+import Filter from "../filter/filter";
 
 
-const TableNav: React.FC<TableNavProps> = ({count, searchBarValue}) => {
+const TableNav: React.FC<TableNavProps> = ({count, searchBarValue, setFilterValue}) => {
   const [searchValue, setSearchValue] = useState<string>('');
 
   const handleChange = (e: { target: { value: string; }; }) => {
-    setSearchValue(e.target.value);
-    searchBarValue(e.target.value);
+    setSearchValue(e.target.value)
   };
+  
+  useEffect(() => {
+    searchBarValue(searchValue);
+  }, [searchValue]);
 
   return (
     <div className="tableNav">
@@ -19,7 +23,7 @@ const TableNav: React.FC<TableNavProps> = ({count, searchBarValue}) => {
       <div className="tools">
         <img src="/table-default.png" />
         <img src="/grid-default.png" />
-        <button className="filter-btn">Filter</button>
+        <Filter setFilterValue={setFilterValue} />
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 type Device = {
   guids: string[];
   icon: {
@@ -48,7 +50,13 @@ interface SearchInputProps {
 
 interface TableNavProps {
   count: number;
-  searchBarValue(e: { target: { value: string; }; }): void;
+  searchBarValue: Dispatch<SetStateAction<string>>;
+  setFilterValue: Dispatch<SetStateAction<string[]>>;
+  // filterValue: string[];
+}
+
+interface FilterProps {
+  setFilterValue: Dispatch<SetStateAction<string[]>>;
 }
 
 export type {
@@ -56,5 +64,6 @@ export type {
   TableDevice,
   TableDeviceProps,
   SearchInputProps,
-  TableNavProps
+  TableNavProps,
+  FilterProps,
 }
