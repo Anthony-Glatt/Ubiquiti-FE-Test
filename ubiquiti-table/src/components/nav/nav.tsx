@@ -1,10 +1,11 @@
 import React from 'react';
 import './styles.scss';
+import { NavProps } from '../../interfaces/interfaces';
 
-const Nav = ({title, author}: {title: string, author: string }) => {
+const Nav: React.FC<NavProps> = ({title, author}) => {
   return (
     <div className='nav'>
-      <img src="/u-default.png" alt='icon' />
+      <div className='logo' />
       <div className='title'>{title}</div>
       <div className='author'>{author}</div>
     </div>

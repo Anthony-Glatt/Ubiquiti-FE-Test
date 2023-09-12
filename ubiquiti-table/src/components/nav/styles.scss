@@ -5,6 +5,20 @@
   color: #808893;
   align-items: center;
 
+  .logo {
+    height: 50px;
+    width: 50px;
+    background-image: url('../../../public/u-default.png');
+
+    &:hover {
+      background: url('../../../public/u-hover.png');
+    }
+
+    &:focus {
+      background: url('../../../public/u-focus.png');
+    }
+  }
+
   .title {
     margin-left: 10px;
   }

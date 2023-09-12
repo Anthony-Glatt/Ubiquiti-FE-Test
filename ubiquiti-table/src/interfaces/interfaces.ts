@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 
-type Device = {
+type DeviceData = {
   guids: string[];
   icon: {
     id: string;
@@ -30,17 +30,36 @@ type Device = {
 };
 
 interface TableDevice  {
+  id: string;
   product: string;
   name: string;
+  shortName: string[];
   icon: {
     id: string;
     resolutions: number[][];
-    url: string;
+    url25: string;
+    url129: string;
+    url257: string;
   }
 };
 
-interface TableDeviceProps {
+interface NavProps {
+  title: string;
+  author: string;
+}
+
+interface TableContainerProps {
   data: TableDevice[];
+  isTable: boolean;
+  setSearchBarValue: Dispatch<SetStateAction<string>>;
+  setFilterValue: Dispatch<SetStateAction<string[]>>;
+  setIsTable: Dispatch<SetStateAction<boolean>>;
+  setDeviceId:  Dispatch<SetStateAction<string>>;
+}
+
+interface TableProps {
+  data: TableDevice[];
+  setDeviceId: Dispatch<SetStateAction<string>>;
 }
 
 interface SearchInputProps {
@@ -52,18 +71,48 @@ interface TableNavProps {
   count: number;
   searchBarValue: Dispatch<SetStateAction<string>>;
   setFilterValue: Dispatch<SetStateAction<string[]>>;
-  // filterValue: string[];
+  setIsTable: Dispatch<SetStateAction<boolean>>;
 }
 
 interface FilterProps {
   setFilterValue: Dispatch<SetStateAction<string[]>>;
 }
 
+interface CardGridProps {
+  data: TableDevice[];
+  setDeviceId: Dispatch<SetStateAction<string>>;
+}
+
+interface CardProps {
+  setDeviceId: Dispatch<SetStateAction<string>>;
+  id: string;
+  product: string;
+  name: string;
+  shortName: string[];
+  icon: {
+    id: string;
+    resolutions: number[][];
+    url25: string;
+    url129: string;
+    url257: string;
+  }
+}
+
+interface DevicePageProps {
+  data: TableDevice[];
+  deviceId: string;
+}
+
 export type {
-  Device,
+  DeviceData,
+  NavProps,
   TableDevice,
-  TableDeviceProps,
+  TableContainerProps,
+  TableProps,
   SearchInputProps,
   TableNavProps,
   FilterProps,
+  CardGridProps,
+  CardProps,
+  DevicePageProps,
 }

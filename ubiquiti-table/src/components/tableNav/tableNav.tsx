@@ -5,7 +5,7 @@ import SearchBar from "../searchBar/searchBar";
 import Filter from "../filter/filter";
 
 
-const TableNav: React.FC<TableNavProps> = ({count, searchBarValue, setFilterValue}) => {
+const TableNav: React.FC<TableNavProps> = ({count, searchBarValue, setFilterValue, setIsTable}) => {
   const [searchValue, setSearchValue] = useState<string>('');
 
   const handleChange = (e: { target: { value: string; }; }) => {
@@ -20,11 +20,9 @@ const TableNav: React.FC<TableNavProps> = ({count, searchBarValue, setFilterValu
     <div className="tableNav">
       <SearchBar searchValue={searchValue} handleChange={handleChange}/>
       <div className="device-count">{count} Devices</div>
-      <div className="tools">
-        <img src="/table-default.png" />
-        <img src="/grid-default.png" />
-        <Filter setFilterValue={setFilterValue} />
-      </div>
+      <div className="table-icon" onClick={() => setIsTable(true)} />
+      <div className="card-icon" onClick={() => setIsTable(false)} />
+      <Filter setFilterValue={setFilterValue} />
     </div>
   );
 };

@@ -1,0 +1,33 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0px 20px;
+
+  .header-product {
+    text-align: left;
+    padding-left: 6%;
+  }
+
+  .header-name {
+    text-align: left;
+    padding-left: 20%;
+  }
+
+  .row {
+    border-bottom: 1px solid #EDEDF0;
+
+    .product-cell {
+      text-align: left;
+    }
+
+    .name-cell {
+      color: #B6B9C4;
+      text-align: left;
+      padding-left: 20%;
+    }
+  }
+
+  .product-icon {
+    margin-right: 10px;
+  }
+}

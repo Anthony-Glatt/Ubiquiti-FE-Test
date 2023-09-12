@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './styles.scss';
 import { FilterProps } from "../../interfaces/interfaces";
 
 const Filter: React.FC<FilterProps> = ({setFilterValue}) => {
@@ -33,10 +34,11 @@ const Filter: React.FC<FilterProps> = ({setFilterValue}) => {
   }, [filterState]);
 
   return (
-    <div>
-      <button className="filter-btn" onClick={() => setIsActive(!isActive)}>Filter</button>
+    <div className="filter">
+      <button className="btn" onClick={() => setIsActive(!isActive)}>Filter</button>
       {isActive ?
-        <div>
+        <div className="form">
+          <div className="title">Product Line</div>
           {categories.map((elm, index) => {
             return (
               <div className="form-check" key={index}>
@@ -51,7 +53,7 @@ const Filter: React.FC<FilterProps> = ({setFilterValue}) => {
               </div>
             );
           })}
-          <button onClick={() => {resetFilters()}}>Reset</button>
+          <button className={filterState.length ? 'reset-active' : 'reset'} onClick={() => {resetFilters()}}>Reset</button>
         </div>
         :
         null

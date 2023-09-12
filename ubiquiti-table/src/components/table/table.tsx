@@ -1,24 +1,33 @@
 import React from "react";
-import { TableDeviceProps } from "../../interfaces/interfaces";
+import { Link } from 'react-router-dom';
+import './styles.scss';
+import { TableProps } from "../../interfaces/interfaces";
 
-const DeviceTable: React.FC<TableDeviceProps> = ({data}) => {
+
+const DeviceTable: React.FC<TableProps> = ({data, setDeviceId}) => {
   return (
-    <table>
+    <table className="table">
       <thead>
         <tr>
-          <th scope="col">Product Line</th>
-          <th scope="col">Name</th>
+          <th className="header-product" scope="col">Product Line</th>
+          <th className="header-name" scope="col">Name</th>
         </tr>
       </thead>
       <tbody>
         {data.map((val, key) => {
           return (
-            <tr key={key}>
-              <td>
-                <img src={val.icon.url} alt='Product Icon'/>
-                {val.product}
+            <tr className="row" key={key}>
+              <td className="product-cell">
+                <img className="product-icon" src={val.icon.url25} alt='Product Icon'/>
+                <Link to="device" style={{ textDecoration: 'none', color: 'inherit'  }} onClick={() => {setDeviceId(val.id)}}>
+                  {val.product}
+                </Link>
               </td>
-              <td>{val.name}</td>
+              <td className="name-cell">
+                <Link to="device" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  {val.name}
+                </Link>
+              </td>
             </tr>
           )
         })}

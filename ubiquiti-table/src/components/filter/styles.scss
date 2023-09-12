@@ -1,0 +1,61 @@
+.filter {
+  z-index: 1;
+  .btn {
+    border-radius: 4px;
+    border-color: transparent;
+
+    &:hover {
+      background-color: #F4F5F6;
+    }
+  
+    &:focus {
+      border-color: #006FFF;
+    }
+  
+    &:active {
+      background-color: #F8F9F9;
+      color:#006FFF;
+    }
+  }
+
+  .form {
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px ;
+    position: absolute;
+    z-index: 10;
+    right: 16px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 8px;
+
+    .title {
+      color: #000000;
+      font-weight: 600;
+      margin: 8px 0px 2px 3px;
+    }
+
+    .form-check {
+      margin: 4px 0px;
+    }
+    
+    .form-check-label {
+      color: #595959;
+    }
+
+    .reset {
+      color: #FABABC;
+      border-color: transparent;
+      background-color: #FFFFFF;
+      margin: 4px 0px 4px 0px;
+    }
+
+    .reset-active {
+      color: #F15356;
+      border-color: transparent;
+      background-color: #FFFFFF;
+      margin: 4px 0px 4px 0px;
+    }
+  }
+}
