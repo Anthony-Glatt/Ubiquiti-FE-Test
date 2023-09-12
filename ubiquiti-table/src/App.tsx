@@ -13,8 +13,6 @@ function App() {
   const [searchBarValue, setSearchBarValue] = useState<string>('');
   const [filterValue, setFilterValue] = useState<string[]>([]);
   const [isTable, setIsTable] = useState<boolean>(true);
-  const [deviceId, setDeviceId] = useState<string>('');
-  console.log(deviceId);
 
   useEffect(() => {
     fetch('/data.json')
@@ -36,6 +34,7 @@ function App() {
         return value;
       });
       setData(tableData);
+      setModTable(tableData);
       setFinalTable(tableData);
     });
   }, []);
@@ -61,9 +60,10 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<TableContainer data={finalTable} isTable={isTable} setSearchBarValue={setSearchBarValue} setFilterValue={setFilterValue} setIsTable={setIsTable} setDeviceId={setDeviceId} />} />
-            <Route path="device" element={<DevicePage data={finalTable} deviceId={deviceId} />} />
+            <Route index element={<TableContainer data={finalTable} isTable={isTable} setSearchBarValue={setSearchBarValue} setFilterValue={setFilterValue} setIsTable={setIsTable} />} />
+            <Route path="/:id" element={<DevicePage data={finalTable} />} />
           </Route>
+          <Route path="*" element={<div>Turn around and never come back!</div>} />
         </Routes>
       </HashRouter>
     </div>

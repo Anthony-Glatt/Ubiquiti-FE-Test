@@ -4,7 +4,7 @@ import './styles.scss';
 import { TableProps } from "../../interfaces/interfaces";
 
 
-const DeviceTable: React.FC<TableProps> = ({data, setDeviceId}) => {
+const DeviceTable: React.FC<TableProps> = ({data}) => {
   return (
     <table className="table">
       <thead>
@@ -19,12 +19,12 @@ const DeviceTable: React.FC<TableProps> = ({data, setDeviceId}) => {
             <tr className="row" key={key}>
               <td className="product-cell">
                 <img className="product-icon" src={val.icon.url25} alt='Product Icon'/>
-                <Link to="device" style={{ textDecoration: 'none', color: 'inherit'  }} onClick={() => {setDeviceId(val.id)}}>
+                <Link to={`/${val.id}`} style={{ textDecoration: 'none', color: 'inherit'  }}>
                   {val.product}
                 </Link>
               </td>
               <td className="name-cell">
-                <Link to="device" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to={`/${val.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   {val.name}
                 </Link>
               </td>

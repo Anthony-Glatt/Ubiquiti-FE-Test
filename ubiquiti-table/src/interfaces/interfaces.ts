@@ -54,12 +54,10 @@ interface TableContainerProps {
   setSearchBarValue: Dispatch<SetStateAction<string>>;
   setFilterValue: Dispatch<SetStateAction<string[]>>;
   setIsTable: Dispatch<SetStateAction<boolean>>;
-  setDeviceId:  Dispatch<SetStateAction<string>>;
 }
 
 interface TableProps {
   data: TableDevice[];
-  setDeviceId: Dispatch<SetStateAction<string>>;
 }
 
 interface SearchInputProps {
@@ -69,7 +67,7 @@ interface SearchInputProps {
 
 interface TableNavProps {
   count: number;
-  searchBarValue: Dispatch<SetStateAction<string>>;
+  setSearchBarValue: Dispatch<SetStateAction<string>>;
   setFilterValue: Dispatch<SetStateAction<string[]>>;
   setIsTable: Dispatch<SetStateAction<boolean>>;
 }
@@ -80,11 +78,9 @@ interface FilterProps {
 
 interface CardGridProps {
   data: TableDevice[];
-  setDeviceId: Dispatch<SetStateAction<string>>;
 }
 
 interface CardProps {
-  setDeviceId: Dispatch<SetStateAction<string>>;
   id: string;
   product: string;
   name: string;
@@ -100,7 +96,6 @@ interface CardProps {
 
 interface DevicePageProps {
   data: TableDevice[];
-  deviceId: string;
 }
 
 export type {

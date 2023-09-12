@@ -5,7 +5,7 @@ import SearchBar from "../searchBar/searchBar";
 import Filter from "../filter/filter";
 
 
-const TableNav: React.FC<TableNavProps> = ({count, searchBarValue, setFilterValue, setIsTable}) => {
+const TableNav: React.FC<TableNavProps> = ({count, setSearchBarValue, setFilterValue, setIsTable}) => {
   const [searchValue, setSearchValue] = useState<string>('');
 
   const handleChange = (e: { target: { value: string; }; }) => {
@@ -13,7 +13,7 @@ const TableNav: React.FC<TableNavProps> = ({count, searchBarValue, setFilterValu
   };
   
   useEffect(() => {
-    searchBarValue(searchValue);
+    setSearchBarValue(searchValue);
   }, [searchValue]);
 
   return (
