@@ -15,7 +15,7 @@ function App() {
   const [isTable, setIsTable] = useState<boolean>(true);
 
   useEffect(() => {
-    fetch('/data/data.json')
+    fetch(`${process.env.PUBLIC_URL}/data/data.json`)
     .then((r) => r.json())
     .then((json) => {
       const devices = json.devices;
