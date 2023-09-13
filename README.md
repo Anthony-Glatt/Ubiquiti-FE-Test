@@ -1,3 +1,7 @@
+## Dev Notes
+
+Aside from the addition of react-router-dom, this project was kept clean and simple to allow for future teams to adapt it as needed. For this reason, no state application was selected and used for managing and centralizing the app's data. If this project is to expand or adapt in a significant way, then it will need to be modified with something like Redux, Mobx, or the like.
+
 ## Available Scripts
 
 In the project directory, you can run:
