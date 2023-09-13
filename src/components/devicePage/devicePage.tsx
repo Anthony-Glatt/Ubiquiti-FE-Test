@@ -35,7 +35,7 @@ const DevicePage: React.FC<DevicePageProps> = ({data}) => {
         <div className="info">
           <div className="name">{`${device?.name}`}</div>
           <div className="product">{`${device?.product}`}</div>
-          <table className="table">
+          <table className="device-table">
             <tbody>
               <tr>
                 <th className="header">Product Line</th>

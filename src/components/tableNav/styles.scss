@@ -3,6 +3,7 @@
   width: auto;
   margin: 12px 0px;
   align-items: center;
+  flex-wrap: wrap;
 
   .device-count {
     color: #CDCDCD;
@@ -10,34 +11,34 @@
     padding-left: 8px;
   }
 
-    .table-icon {
-      height: 32px;
-      width: 32px;
-      margin-left: auto;
-      background: url('../../../public/png/table-default.png');
+  .table-icon {
+    height: 32px;
+    width: 32px;
+    margin-left: auto;
+    background: url('../../../public/png/table-default.png');
 
-      &:hover {
-        background: url('../../../public/png/table-hover.png');
-      }
-  
-      &:focus {
-        background: url('../../../public/png/table-focus.png');
-      }
-  
-      &:active {
-        background: url('../../../public/png/table-active.png');
-      }
+    &:hover {
+      background: url('../../../public/png/table-hover.png');
     }
 
-    .card-icon {
-      height: 32px;
-      width: 32px;
-      background: url('../../../public/png/grid-default.png');
-
-      &:active {
-        background: url('../../../public/png/grid-active.png');
-      }
+    &:focus {
+      background: url('../../../public/png/table-focus.png');
     }
+
+    &:active {
+      background: url('../../../public/png/table-active.png');
+    }
+  }
+
+  .card-icon {
+    height: 32px;
+    width: 32px;
+    background: url('../../../public/png/grid-default.png');
+
+    &:active {
+      background: url('../../../public/png/grid-active.png');
+    }
+  }
 
   .filter {
     background-color: #FFFFFF;

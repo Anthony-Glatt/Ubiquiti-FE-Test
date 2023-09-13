@@ -58,9 +58,17 @@
     justify-content: center;
     margin-top: 32px;
 
+    @media (max-width: 750px) {
+      flex-direction: column;
+    }
+
     .img {
       background-color: #F9FAFA;
       margin-right: 24px;
+
+      @media (max-width:750px) {
+        margin-right: 0px;
+      }
     }
 
     .info {
@@ -75,9 +83,11 @@
         font-size: 12px;
       }
 
-      .table {
+      .device-table {
         border-collapse:separate; 
         border-spacing: 0 1em;
+        width: 90%;
+        margin: 0px auto;
 
         .header {
           font-weight: 100;
