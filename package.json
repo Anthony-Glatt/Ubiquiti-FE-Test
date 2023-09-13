@@ -1,7 +1,7 @@
 {
   "name": "ubiquiti-table",
   "version": "0.1.0",
-  "homepage": "https://anthony-glatt.github.io/",
+  "homepage": "https://anthony-glatt.github.io/Ubiquiti-FE-Test",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -22,7 +22,6 @@
     "predeploy": "npm run build",
     "deploy": "main -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
