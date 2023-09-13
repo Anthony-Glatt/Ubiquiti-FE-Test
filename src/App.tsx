@@ -15,7 +15,7 @@ function App() {
   const [isTable, setIsTable] = useState<boolean>(true);
 
   useEffect(() => {
-    fetch('/data.json')
+    fetch('data.json')
     .then((r) => r.json())
     .then((json) => {
       const devices = json.devices;
