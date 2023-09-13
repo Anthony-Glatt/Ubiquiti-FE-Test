@@ -5,7 +5,6 @@ import { DevicePageProps, TableDevice } from "../../interfaces/interfaces";
 
 const DevicePage: React.FC<DevicePageProps> = ({data}) => {
   const navigate = useNavigate ();
-
   const queryString = window.location.href;
   const splitUrl = queryString.split('#/');
   const deviceId = splitUrl[1];
@@ -21,12 +20,12 @@ const DevicePage: React.FC<DevicePageProps> = ({data}) => {
       <div className="device-nav">
         <button className="btn back-btn" onClick={() => navigate(-1)}>Back</button>
         { leftDevice !== undefined ?
-          <Link to={`/device/${leftDevice.id}`} className="btn left-link"></Link>
+          <Link to={`/${leftDevice.id}`} className="btn left-link"></Link>
           :
           <div className="btn left-btn"></div>
         }
         { rightDevice !== undefined ?
-          <Link to={`/device/${rightDevice.id}`} className="btn right-link"></Link>
+          <Link to={`/${rightDevice.id}`} className="btn right-link"></Link>
           :
           <div className="btn right-btn"></div>
         }

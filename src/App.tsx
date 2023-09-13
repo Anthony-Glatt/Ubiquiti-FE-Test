@@ -18,7 +18,6 @@ function App() {
     fetch('/data/data.json')
     .then((r) => r.json())
     .then((json) => {
-      console.log(json);
       const devices = json.devices;
       const deviceData = devices.map((value: DeviceData) => ({id: value.id, product: value.line.name, name: value.product.name, shortName: value.shortnames, icon: value.icon}));
       const tableData = deviceData.map((value: TableDevice) => {
@@ -62,7 +61,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<TableContainer data={finalTable} isTable={isTable} setSearchBarValue={setSearchBarValue} setFilterValue={setFilterValue} setIsTable={setIsTable} />} />
-            <Route path="/:id" element={<DevicePage data={finalTable} />} />
+          <Route path="/:id" element={<DevicePage data={finalTable} />} />
           </Route>
           <Route path="*" element={<div>Turn around and never come back!</div>} />
         </Routes>
