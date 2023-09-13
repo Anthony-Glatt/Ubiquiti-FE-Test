@@ -1,7 +1,7 @@
 {
   "name": "ubiquiti-table",
   "version": "0.1.0",
-  "homepage": "https://anthony-glatt.github.io/Ubiquiti-FE-Test/",
+  "homepage": "https://anthony-glatt.github.io/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
