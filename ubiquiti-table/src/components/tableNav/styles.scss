@@ -14,28 +14,28 @@
       height: 32px;
       width: 32px;
       margin-left: auto;
-      background: url('../../../public/table-default.png');
+      background: url('../../../public/png/table-default.png');
 
       &:hover {
-        background: url('../../../public/table-hover.png');
+        background: url('../../../public/png/table-hover.png');
       }
   
       &:focus {
-        background: url('../../../public/table-focus.png');
+        background: url('../../../public/png/table-focus.png');
       }
   
       &:active {
-        background: url('../../../public/table-active.png');
+        background: url('../../../public/png/table-active.png');
       }
     }
 
     .card-icon {
       height: 32px;
       width: 32px;
-      background: url('../../../public/grid-default.png');
+      background: url('../../../public/png/grid-default.png');
 
       &:active {
-        background: url('../../../public/grid-active.png');
+        background: url('../../../public/png/grid-active.png');
       }
     }
 

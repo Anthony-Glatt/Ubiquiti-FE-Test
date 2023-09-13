@@ -8,14 +8,14 @@
   .logo {
     height: 50px;
     width: 50px;
-    background-image: url('../../../public/u-default.png');
+    background-image: url('../../../public/png/u-default.png');
 
     &:hover {
-      background: url('../../../public/u-hover.png');
+      background: url('../../../public/png/u-hover.png');
     }
 
     &:focus {
-      background: url('../../../public/u-focus.png');
+      background: url('../../../public/png/u-focus.png');
     }
   }
 

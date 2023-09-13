@@ -16,6 +16,12 @@
   .row {
     border-bottom: 1px solid #EDEDF0;
 
+    .cell {
+      &:hover {
+        background-color: #F4F5F6;
+      }
+    }
+
     .product-cell {
       text-align: left;
     }

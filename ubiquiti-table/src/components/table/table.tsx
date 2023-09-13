@@ -19,12 +19,12 @@ const DeviceTable: React.FC<TableProps> = ({data}) => {
             <tr className="row" key={key}>
               <td className="product-cell">
                 <img className="product-icon" src={val.icon.url25} alt='Product Icon'/>
-                <Link to={`/${val.id}`} style={{ textDecoration: 'none', color: 'inherit'  }}>
+                <Link to={`/${val.id}`} style={{ textDecoration: 'none', color: 'inherit'  }} className="cell">
                   {val.product}
                 </Link>
               </td>
               <td className="name-cell">
-                <Link to={`/${val.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to={`/${val.id}`} style={{ textDecoration: 'none', color: 'inherit' }} className="cell">
                   {val.name}
                 </Link>
               </td>

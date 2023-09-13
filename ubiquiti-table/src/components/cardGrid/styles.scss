@@ -1,5 +1,6 @@
 .cardGrid {
   display: flex;
-  max-width: auto;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }

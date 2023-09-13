@@ -8,7 +8,8 @@ const Card: React.FC<CardProps> = ({id, product, name, shortName, icon}) => {
     <div className="card">
       <Link to={`/${id}`} style={{ textDecoration: 'none', color: 'inherit'  }}>
         <div className="image-container">
-          <img className="image" src={icon.url129}></img>
+          <img className="image" src={icon.url129} alt='device' />
+          <div className="product">{product}</div>
         </div>
         <div className="info">
           <div className="name">{name}</div>

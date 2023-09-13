@@ -15,10 +15,23 @@
 
   .image-container {
     background-color: #F9FAFA;
+    position: relative;
+
     .image {
       height: 129px;
       width: 129px;
       background-color: #F9FAFA;
+    }
+
+    .product {
+      position: absolute;
+      display: flex;
+      right: 0;
+      top: 0;
+      padding: .5rem;
+      margin: 4px;
+      color: #006FFF;
+      font-size: 12px;
     }
   }
 
