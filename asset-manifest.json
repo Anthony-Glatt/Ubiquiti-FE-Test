@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Ubiquiti-FE-Test/static/css/main.3b1f69ef.css",
-    "main.js": "/Ubiquiti-FE-Test/static/js/main.2e4093ff.js",
+    "main.css": "/Ubiquiti-FE-Test/static/css/main.6bc95309.css",
+    "main.js": "/Ubiquiti-FE-Test/static/js/main.23a3778b.js",
     "static/js/787.25fe4635.chunk.js": "/Ubiquiti-FE-Test/static/js/787.25fe4635.chunk.js",
     "index.html": "/Ubiquiti-FE-Test/index.html",
-    "main.3b1f69ef.css.map": "/Ubiquiti-FE-Test/static/css/main.3b1f69ef.css.map",
-    "main.2e4093ff.js.map": "/Ubiquiti-FE-Test/static/js/main.2e4093ff.js.map",
+    "main.6bc95309.css.map": "/Ubiquiti-FE-Test/static/css/main.6bc95309.css.map",
+    "main.23a3778b.js.map": "/Ubiquiti-FE-Test/static/js/main.23a3778b.js.map",
     "787.25fe4635.chunk.js.map": "/Ubiquiti-FE-Test/static/js/787.25fe4635.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b1f69ef.css",
-    "static/js/main.2e4093ff.js"
+    "static/css/main.6bc95309.css",
+    "static/js/main.23a3778b.js"
   ]
 }
